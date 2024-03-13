@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        tools:ignore="NotSibling"
+    />
+
+    <TextView
+        android:id="@+id/Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="yourPAL"
+        android:textColorHighlight="@color/black"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:textStyle="bold"
+        android:textColor="#03A9F4"
+        android:textSize="28dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/write_here"
+            android:background="@drawable/rounded"
+            android:padding="16dp"
+            android:layout_toStartOf="@+id/send"
+            android:layout_centerInParent="true" />
+        <ImageButton
+            android:layout_width="48dp"
+            android:id="@+id/send"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/go"
+android:background="?attr/selectableItemBackground"
+            android:padding="8dp"
+
+
+            tools:ignore="ContentDescription">
+
+        </ImageButton>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Welcome"
+        android:layout_alignStart="@+id/Welcome"
+        android:layout_alignEnd="@+id/Welcome"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:importantForAccessibility="no" />
+
+</RelativeLayout>
